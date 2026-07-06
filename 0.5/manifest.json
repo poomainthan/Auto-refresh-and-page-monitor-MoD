@@ -37,7 +37,7 @@
    },
    "permissions": [ "notifications", "tabs", "storage", "unlimitedStorage", "contextMenus", "scripting", "alarms", "webRequest", "cookies", "sidePanel", "offscreen", "power" ],
    "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
-   "version": "9.1.5",
+   "version": "0.5",
    "web_accessible_resources": [ {
       "matches": [ "\u003Call_urls>" ],
       "resources": [ "assets/*", "content-scripts/*", "_locales/*" ]
