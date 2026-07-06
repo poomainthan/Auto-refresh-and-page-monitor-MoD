@@ -1,0 +1,49 @@
+{
+   "action": {
+      "default_popup": "popup.html",
+      "default_title": "Auto Refresh Plus"
+   },
+   "author": "Auto Refresh Plus",
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "content-scripts/arp.js", "content-scripts/script.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_app_description__",
+   "externally_connectable": {
+      "matches": [ "*://*/*" ]
+   },
+   "homepage_url": "https://poomainthan.vercel.app",
+   "icons": {
+      "128": "icon/128.png",
+      "16": "icon/16.png",
+      "32": "icon/32.png",
+      "48": "icon/48.png",
+      "96": "icon/96.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xrZ6Urw35B0KY3dC2/qH087jXn5T6vuUO/UG5T88mbRalvZ9Wa5FE2ts6PGlv+XUPOouy6ogDxXU0C9agiKAgHCd/2UHjrjXfB1H7k1ywERCddJJgvItT2FsnCBOUcg3qulyosjV07cPb/OsjQ9ZT7djsJZwo23jwIdbYabG8or81s4sIlj4QIe3eI3qPKRhZIfga12YWKbmXE3tatKbBKoyCoGJTwqIt+rzOp7wAvS8zh3ph/6M7am+rCVK3X58l7kka+3xYyjZFfboeiWySHxxhXj+IgARY/u30456+5CEZD0MXEUHwlkkYIH28cOSoPbrsCRkllk8dvEiQ1a8QIDAQAB",
+   "manifest_version": 3,
+   "name": "Auto Refresh Plus | Page Monitor",
+   "optional_host_permissions": [ "http://*/*", "https://*/*" ],
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "notifications", "tabs", "storage", "unlimitedStorage", "contextMenus", "scripting", "alarms", "webRequest", "cookies", "sidePanel", "offscreen", "power" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "9.1.5",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "assets/*", "content-scripts/*", "_locales/*" ]
+   }, {
+      "matches": [ "*://*/*" ],
+      "resources": [ "content-scripts/script.css" ],
+      "use_dynamic_url": true
+   } ]
+}
